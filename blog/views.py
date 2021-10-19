@@ -8,7 +8,7 @@ def home(request):
     return render(request, "index.html", {"posts" : all_posts})
 
 def post_single(request,post):
-    
-    post = get_object_or_404(Post, slug = post,status = "published")
 
-    return render(request,"single.html", {"post" : post})
+    post = get_object_or_404(Post, slug=post, status="published")
+
+    return render(request, "single.html", {"post" : post})
